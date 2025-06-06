@@ -1,4 +1,5 @@
 /* Reset e Box-sizing */
+/* Reset e Box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +9,9 @@
 /* Corpo */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Cabeçalho */
@@ -17,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
     padding: 20px;
 }
@@ -36,52 +38,52 @@ header nav ul li a {
     text-decoration: none;
 }
 
-/* Filtro */
-.filter {
+/* Seção de Introdução */
+.intro {
     text-align: center;
-    margin: 30px 0;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 30px;
 }
 
-.filter select {
-    padding: 10px;
-    font-size: 1rem;
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
-/* Destinos */
-.destinations {
+/* Destaques de Eventos */
+.highlights {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 30px;
     padding: 0 20px;
 }
 
-.destination {
-    background-color: white;
+.highlight-item {
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
 }
 
-.destination img {
+.highlight-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.destination h3 {
-    margin: 10px 0;
+.highlight-item h3 {
     font-size: 1.5rem;
+    margin: 15px 0;
 }
 
-.destination p {
+.highlight-item p {
     font-size: 1rem;
     margin-bottom: 20px;
 }
 
-/* Botões */
 button.detailsBtn {
     background-color: #4CAF50;
     color: white;
@@ -95,6 +97,29 @@ button.detailsBtn:hover {
     background-color: #45a049;
 }
 
+/* Galeria */
+.gallery {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 /* Modal */
 .modal {
     display: none;
@@ -105,8 +130,7 @@ button.detailsBtn:hover {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {
@@ -136,8 +160,12 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 20px;
 }
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    color: white;

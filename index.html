@@ -3,73 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postos Turísticos Brasil</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Festejando a Conexão Campo-Cidade</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <h1>Postos Turísticos Brasil</h1>
+            <h1>Festejando a Conexão Campo-Cidade</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Destinos</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Gastronomia</a></li>
+                <li><a href="#">Cultura</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Filtro -->
-    <section class="filter">
-        <h2>Encontre o seu destino</h2>
-        <select id="categoryFilter">
-            <option value="todos">Todos os Destinos</option>
-            <option value="praia">Praias</option>
-            <option value="montanha">Montanhas</option>
-            <option value="cidade">Cidades</option>
-        </select>
+    <!-- Seção de Introdução -->
+    <section class="intro">
+        <h2>A Celebração das Nossas Raízes</h2>
+        <p>O campo e a cidade são dois mundos que se encontram para criar experiências únicas. Vamos celebrar essa conexão rica, com música, gastronomia e cultura! Explore as festas, os produtos típicos e as tradições que fazem dessa união uma verdadeira festa.</p>
     </section>
 
-    <!-- Galeria de Destinos -->
-    <section class="destinations" id="destinations">
-        <article class="destination" data-category="praia">
-            <img src="https://via.placeholder.com/300x200?text=Praia+do+Litoral" alt="Praia do Litoral">
-            <h3>Praia do Litoral</h3>
-            <p>Uma das praias mais bonitas do Brasil, ideal para quem busca tranquilidade e boas ondas.</p>
-            <button class="detailsBtn" onclick="openModal('Praia do Litoral')">Ver Mais</button>
-        </article>
-
-        <article class="destination" data-category="montanha">
-            <img src="https://via.placeholder.com/300x200?text=Serra+do+Pará" alt="Serra do Pará">
-            <h3>Serra do Pará</h3>
-            <p>Para os aventureiros, a Serra oferece trilhas e paisagens deslumbrantes.</p>
-            <button class="detailsBtn" onclick="openModal('Serra do Pará')">Ver Mais</button>
-        </article>
-
-        <article class="destination" data-category="cidade">
-            <img src="https://via.placeholder.com/300x200?text=Rio+de+Janeiro" alt="Rio de Janeiro">
-            <h3>Rio de Janeiro</h3>
-            <p>Conheça a cidade maravilhosa com suas praias icônicas e o Cristo Redentor.</p>
-            <button class="detailsBtn" onclick="openModal('Rio de Janeiro')">Ver Mais</button>
-        </article>
+    <!-- Seção de Destaques: Eventos e Atividades -->
+    <section class="highlights">
+        <h2>Eventos que Conectam o Campo à Cidade</h2>
+        <div class="highlight-item">
+            <img src="https://via.placeholder.com/400x300?text=Festa+do+Milho" alt="Festa do Milho">
+            <h3>Festa do Milho</h3>
+            <p>Uma celebração de tradição, com música, danças e comidas típicas do campo, reunindo a comunidade rural e urbana.</p>
+            <button class="detailsBtn" onclick="openModal('Festa do Milho')">Ver Mais</button>
+        </div>
+        
+        <div class="highlight-item">
+            <img src="https://via.placeholder.com/400x300?text=Festival+Gastron%C3%B4mico" alt="Festival Gastronômico">
+            <h3>Festival Gastronômico</h3>
+            <p>Comida de qualidade, feita no campo e servida na cidade. Uma troca de saberes e sabores que aproxima a cultura rural e urbana.</p>
+            <button class="detailsBtn" onclick="openModal('Festival Gastronômico')">Ver Mais</button>
+        </div>
+        
+        <div class="highlight-item">
+            <img src="https://via.placeholder.com/400x300?text=Rodeio+Tradicional" alt="Rodeio Tradicional">
+            <h3>Rodeio Tradicional</h3>
+            <p>Uma mistura de força, coragem e cultura do campo que chega à cidade com muito entretenimento e adrenalina.</p>
+            <button class="detailsBtn" onclick="openModal('Rodeio Tradicional')">Ver Mais</button>
+        </div>
     </section>
 
-    <!-- Modal para detalhes -->
-    <div id="destinationModal" class="modal">
+    <!-- Galeria de Imagens -->
+    <section class="gallery">
+        <h2>Uma Galeria de Imagens: Campo e Cidade</h2>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200?text=Campo" alt="Paisagem do Campo">
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200?text=Cidade" alt="Paisagem da Cidade">
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200?text=Conex%C3%A3o" alt="Conexão entre Campo e Cidade">
+        </div>
+    </section>
+
+    <!-- Modal de Eventos -->
+    <div id="eventModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h3 id="modalTitle"></h3>
-            <p>Descrição detalhada do destino turístico.</p>
+            <p>Detalhes sobre o evento selecionado...</p>
         </div>
     </div>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Postos Turísticos Brasil - Todos os direitos reservados</p>
+        <p>&copy; 2025 Festejando a Conexão Campo-Cidade. Todos os direitos reservados.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
