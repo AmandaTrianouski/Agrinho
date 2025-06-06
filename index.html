@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postos Turísticos Brasil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Postos Turísticos Brasil</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filtro -->
+    <section class="filter">
+        <h2>Encontre o seu destino</h2>
+        <select id="categoryFilter">
+            <option value="todos">Todos os Destinos</option>
+            <option value="praia">Praias</option>
+            <option value="montanha">Montanhas</option>
+            <option value="cidade">Cidades</option>
+        </select>
+    </section>
+
+    <!-- Galeria de Destinos -->
+    <section class="destinations" id="destinations">
+        <article class="destination" data-category="praia">
+            <img src="https://via.placeholder.com/300x200?text=Praia+do+Litoral" alt="Praia do Litoral">
+            <h3>Praia do Litoral</h3>
+            <p>Uma das praias mais bonitas do Brasil, ideal para quem busca tranquilidade e boas ondas.</p>
+            <button class="detailsBtn" onclick="openModal('Praia do Litoral')">Ver Mais</button>
+        </article>
+
+        <article class="destination" data-category="montanha">
+            <img src="https://via.placeholder.com/300x200?text=Serra+do+Pará" alt="Serra do Pará">
+            <h3>Serra do Pará</h3>
+            <p>Para os aventureiros, a Serra oferece trilhas e paisagens deslumbrantes.</p>
+            <button class="detailsBtn" onclick="openModal('Serra do Pará')">Ver Mais</button>
+        </article>
+
+        <article class="destination" data-category="cidade">
+            <img src="https://via.placeholder.com/300x200?text=Rio+de+Janeiro" alt="Rio de Janeiro">
+            <h3>Rio de Janeiro</h3>
+            <p>Conheça a cidade maravilhosa com suas praias icônicas e o Cristo Redentor.</p>
+            <button class="detailsBtn" onclick="openModal('Rio de Janeiro')">Ver Mais</button>
+        </article>
+    </section>
+
+    <!-- Modal para detalhes -->
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p>Descrição detalhada do destino turístico.</p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Postos Turísticos Brasil - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
